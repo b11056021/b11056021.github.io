@@ -1,8 +1,3 @@
-/*網頁本身*/
-
-body {}
-
-
 /*導覽列*/
 
 nav {
@@ -30,6 +25,12 @@ li a:hover {
     padding: 20px;
 }
 
+.btn-oblong {
+    border-radius: 30px 30px 30px 30px;
+    background-color: rgb(165, 117, 190);
+    border-color: rgb(165, 117, 190);
+}
+
 @media (max-width:992px) {
     nav {
         height: auto;
@@ -47,12 +48,36 @@ li a:hover {
     height: 500px;
 }
 
+.carousel-caption {
+    vertical-align: inherit;
+}
 
-/*影片*/
+@media (max-width:768px) {
+    .slide-pic {
+        width: 100%;
+        height: 300px;
+    }
+}
 
-.video {
-    padding-top: 20px;
-    padding-left: 20px;
-    width: 30%;
-    height: 20px;
+
+/*關於我*/
+
+article {
+    padding: 10px;
+}
+
+hr {
+    margin: 50px;
+}
+
+.text {
+    padding: 15px;
+}
+
+
+/*腳*/
+
+footer {
+    background-color: #CC9966;
+    margin-top: 10px;
 }

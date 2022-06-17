@@ -20,12 +20,15 @@
     </script>
     <!-- 連結CSS -->
     <link rel="stylesheet" href="設計.css">
+    <!-- 連結小圖標 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 </head>
 
 <body>
     <!-- 頭 -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container-fluid">
                 <!-- 手機視窗 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
@@ -37,57 +40,154 @@
                     <!-- 列出內容 -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">首頁</a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-house-chimney"></i> 首頁</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">關於我~</a>
+                            <a class="nav-link" href="#me"><i class="fa-solid fa-face-grin-stars"></i></i> 關於我~</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">地方玩透透</a>
+                            <a class="nav-link" href="#play"><i class="fa-solid fa-motorcycle"></i> 好好玩</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#food"><i class="fa-solid fa-utensils"></i> 好好吃</a>
                         </li>
                     </ul>
+                    <a href="https://www.instagram.com/zoe.owo.1017/"><button type="button" class="btn btn-primary btn-oblong"><i class="fa-brands fa-instagram px-1"></i>我的IG</button></a>
                 </div>
             </div>
         </nav>
         <!-- 投影片 -->
         <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="咒術迴戰.jpg" class="slide-pic" alt="1">
+                    <img class="slide-pic" src="歡迎到我網頁照片.jpg" alt="slide1">
+                    <div class="carousel-caption">
+                        <h1><b>歡迎來到我的網站！</b></h1>
+                        <p>我是柔伊，跟著我去屏東玩吧</p>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="咒術迴戰.jpg" class="slide-pic" alt="2">
+                <div class="carousel-item ">
+                    <img class="slide-pic" src="關於我照片.jpg" alt="slide2">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-face-grin-stars"></i> 關於我~</b></h1>
+                        <p>桃園大溪人，因就讀屏科大，於是開始了屏東之旅...</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="#">看更多</a>
+                        </p>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="咒術迴戰.jpg" class="slide-pic" alt="3">
+                <div class="carousel-item ">
+                    <img class="slide-pic" src="好好玩照片.jpg" alt="slide3">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-motorcycle"></i> 好好玩</b></h1>
+                        <p>到過屏東那些地方呢?...</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="#">看更多</a>
+                        </p>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="咒術迴戰.jpg" class="slide-pic" alt="4">
+                <div class="carousel-item ">
+                    <img class="slide-pic" src="好好吃照片.jpg" alt="slide4">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-utensils"></i> 好好吃</b></h1>
+                        <p>屏東有吃過什麼?...</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="#">看更多</a>
+                        </p>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon"></span>
             </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
+            </div>
         </div>
     </header>
+
+    <!-- 主要內容 -->
     <article>
-        <div class="video">
-            <video controls><source src="鹿境.mp4"></video>
+        <!-- 關於我 -->
+        <div class="container" id="me">
+            <div class="row">
+                <!-- 影片 -->
+                <div class="col-lg-5 col-md-8 col-sm-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="關於我影片.mp4" title="關於我video"></iframe>
+                    </div>
+                </div>
+                <!-- 文字 -->
+                <div class="col-lg-7 col-md-4 col-sm-12">
+                    <div class="text">
+                        <h2>關於我~</h2>
+                        <p>桃園大溪人，因就讀屏科大，於是開始了屏東之旅...</p>
+                        <a href="#">想更認識我！<i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <hr>
 
+        <!-- 好好玩 -->
+        <div class="container" id="play">
+            <div class="row">
+                <!-- 文字 -->
+                <div class="col-lg-7 col-md-4 col-sm-12">
+                    <div class="text">
+                        <h2>好好玩</h2>
+                        <p>這裡是大光沙灘，當天風超大，不過天氣超好，天空跟海都很好看...</p>
+                        <a href="#">想知道更多好玩的地方！<i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <!-- 影片 -->
+                <div class="col-lg-5 col-md-8 col-sm-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="好好玩影片.mp4" title="鹿境video"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 好好吃 -->
+        <div class="container" id="food">
+            <div class="row">
+                <!-- 影片 -->
+                <div class="col-lg-5 col-md-8 col-sm-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="好好吃影片.mp4" title="鹿境video"></iframe>
+                    </div>
+                </div>
+                <!-- 文字 -->
+                <div class="col-lg-7 col-md-4 col-sm-12">
+                    <div class="text">
+                        <h2>好好吃</h2>
+                        <p>這邊是澤．甜湯室，最有名的是櫻花奶酪...</p>
+                        <a href="#">想知道更多好吃的食物！<i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </article>
+
+    <!-- 腳 -->
+    <footer class="py-3">
+        <h4 class="text-center"><i class="fa-regular fa-face-laugh-wink"></i>柔伊的屏東旅遊網頁</h4>
+    </footer>
+
+
+
+
+
 </body>
 
 </html>
