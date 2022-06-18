@@ -60,14 +60,23 @@ li a:hover {
 }
 
 
-/*關於我*/
+/*腳*/
+
+footer {
+    background-image: linear-gradient(#CC9966, #c8a27c, white);
+    margin-top: 40px;
+}
+
+.figure {
+    width: 500px;
+    height: 500px;
+}
+
+
+/*首頁內容*/
 
 article {
     padding: 10px;
-}
-
-hr {
-    margin: 50px;
 }
 
 .text {
@@ -75,9 +84,24 @@ hr {
 }
 
 
-/*腳*/
+/*關於我*/
 
-footer {
+small {
+    font-size: smaller;
+}
+
+
+/*好好玩*/
+
+#photo {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.text-muted {
+    text-align: right;
+}
+
+.bg-Light {
     background-color: #CC9966;
-    margin-top: 10px;
 }

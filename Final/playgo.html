@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>好好玩!</title>
+    <meta charset="UTF-8">
+    <!-- 響應式網站 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boostrap 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    目前畫面寬度：<span id="res"></span>
+    <script>
+        document.getElementById('res').textContent = window.innerWidth;
+
+        window.onresize = function() {
+            document.getElementById('res').textContent = window.innerWidth;
+        }
+    </script>
+    <!-- 連結CSS -->
+    <link rel="stylesheet" href="設計.css">
+    <!-- 連結小圖標 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- 連結play排版 -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+</head>
+
+<body>
+    <!-- 頭 -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <!-- 手機視窗 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 電腦視窗 -->
+                <div class="collapse navbar-collapse" id="linkbar">
+                    <!-- 列出內容 -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fa-solid fa-house-chimney"></i> 首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mego.html"><i class="fa-solid fa-face-grin-stars"></i></i> 關於我~</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-motorcycle"></i> 好好玩</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-utensils"></i> 好好吃</a>
+                        </li>
+                    </ul>
+                    <a href="https://www.instagram.com/zoe.owo.1017/"><button type="button" class="btn btn-primary btn-oblong"><i class="fa-brands fa-instagram px-1"></i>我的IG</button></a>
+                </div>
+            </div>
+        </nav>
+        <!-- 投影片 -->
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img class="slide-pic" src="投影片/歡迎到我網頁照片.jpg" alt="slide1">
+                    <div class="carousel-caption">
+                        <h1><b>歡迎來到我的網站！</b></h1>
+                        <p>我是柔伊，跟著我去屏東玩吧</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="index.html">看影片去</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="slide-pic" src="投影片/關於我照片.jpg" alt="slide2">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-face-grin-stars"></i> 關於我~</b></h1>
+                        <p>桃園大溪人，因就讀屏科大，於是開始了屏東之旅...</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="mego.html">了解更多</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img class="slide-pic" src="投影片/好好玩照片.jpg" alt="slide3">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-motorcycle"></i> 好好玩</b></h1>
+                        <p>到過屏東那些地方呢?...</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img class="slide-pic" src="投影片/好好吃照片.jpg" alt="slide4">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-utensils"></i> 好好吃</b></h1>
+                        <p>屏東有吃過什麼?...</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="#">吃更多</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" class="active"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要內容 -->
+    <article>
+        <div class="container">
+            <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 690px;">
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                    <div class="card" id="photo">
+                        <img src="好好玩/海洋生物博物館.jpg" alt="海生館" id="photo">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa-solid fa-fish px-1"></i>海洋生物博物館</h5>
+                            <p>有很多的魚魚</p>
+                            <div class="dropdown-center">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                想更了解
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
+                                    <li><a class="dropdown-item" href="https://www.google.com/maps/search/%E5%B1%8F%E6%9D%B1%E6%B5%B7%E7%94%9F%E9%A4%A8/@22.04688,120.6955592,17z/data=!3m1!4b1">詳細位置</a></li>
+                                    <li><a class="dropdown-item" href="https://ssur.cc/K2cpMMw">更多照片</a></li>
+                                    <li><a class="dropdown-item" href="https://www.nmmba.gov.tw/">官方網站</a></li>
+                                </ul>
+                            </div>
+                            <figcaption class="text-muted"><small><i>車城鄉後灣路2號</i></small></figcaption>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
+                    <div class="card bg-Light text-white p-3">
+                        <h5 style="text-align: center;"><b>出去玩的好處</b></h5>
+                        <ul>
+                            <li>增強適應力</li>
+                            <li>提升創造力</li>
+                            <li>廣闊視野</li>
+                            <li>克服恐懼的心理</li>
+                            <li>擺脫原有生活的束縛</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                    <div class="card" id="photo">
+                        <img src="好好玩/勝利星村.jpg" alt="勝利星村" id="photo">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa-solid fa-star px-1"></i>勝利星村創意生活園區</h5>
+                            <p>可以拍拍照，吃吃下午茶的好去處</p>
+                            <div class="dropdown-center">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                想更了解
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
+                                    <li><a class="dropdown-item" href="https://ssur.cc/fQWwJXU">詳細位置</a></li>
+                                    <li><a class="dropdown-item" href="https://ssur.cc/m5uqBar">更多照片</a></li>
+                                    <li><a class="dropdown-item" href="https://vipzone.cultural.pthg.gov.tw/about.aspx?id=4586">官方網站</a></li>
+                                </ul>
+                                <figcaption class="text-muted"><small><i>屏東市青島街106號</i></small></figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                    <div class="card" id="photo">
+                        <img src="好好玩/四林平地.jpg" alt="四林平地" id="photo">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa-solid fa-tree px-1"></i>林後四林平地森林園區</h5>
+                            <p>很多的草地，很適合散步的地方</p>
+                            <div class="dropdown-center">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                想更了解
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
+                                    <li><a class="dropdown-item" href="https://ssur.cc/4r2i69N">詳細位置</a></li>
+                                    <li><a class="dropdown-item" href="https://ssur.cc/MrwNnpj">更多照片</a></li>
+                                    <li><a class="dropdown-item" href="https://recreation.forest.gov.tw/Forest/FP?typ_id=06001">官方網站</a></li>
+                                </ul>
+                                <figcaption class="text-muted"><small><i>潮州鎮潮義路221-1號</i></small></figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 310px;">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>關於影片...</b></h5>
+                            <p>影片的拍攝地點竟然好吃又好玩？</p>
+                            <p>還不快點到好好吃看看</p>
+                            <a href="#">
+                                <p><small>點我到好好吃頁面 GOGO</small></p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 488px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">有話想說...</h5>
+                            <p>屏東雖然相較其他縣市沒那麼繁華，不過也是個值得來旅遊的好去處窩</p>
+                            <figcaption class="blockquote-footer mb-0 text-muted">
+                                <cite title="來源標題">陳柔伊 </cite>這麼覺得
+                            </figcaption>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                    <div class="card" id="photo">
+                        <img src="好好玩/1936文化基地.jpg" alt="1936文化基地" id="photo">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa-solid fa-smoking px-2"></i>屏菸1936文化基地(屏東菸葉廠)</h5>
+                            <p>原本是菸廠，現為文化基地，有許多大大小小的展覽</p>
+                            <div class="dropdown-center">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                想更了解
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
+                                    <li><a class="dropdown-item" href="https://ssur.cc/tVzpoiX">詳細位置</a></li>
+                                    <li><a class="dropdown-item" href="https://ssur.cc/B5a5ntH">更多照片</a></li>
+                                    <li><a class="dropdown-item" href="https://www.cultural.pthg.gov.tw/pt1936/Default.aspx">官方網站</a></li>
+                                </ul>
+                                <figcaption class="text-muted"><small><i>屏東市菸廠路1號</i></small></figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 488px;">
+                    <img src="好好玩/天空.jpg" alt="天空" class="img-thumbnail" style="border-radius: 20px;">
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                    <div class="ratio ratio-1x1">
+                        <iframe src="好好玩/好好玩影片.mp4" title="好好玩video"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+
+    <!-- 腳 -->
+    <footer class="py-3">
+        <div class="text-center">
+            <h4><i class="fa-regular fa-face-laugh-wink"></i>柔伊的屏東旅遊網頁</h4>
+            <a href="#">
+                <p>回到最上面</p>
+            </a>
+        </div>
+    </footer>
