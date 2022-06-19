@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>好好吃!</title>
+    <meta charset="UTF-8">
+    <!-- 響應式網站 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boostrap 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- 連結CSS -->
+    <link rel="stylesheet" href="設計.css">
+    <!-- 連結小圖標 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- 頭 -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <!-- 手機視窗 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 電腦視窗 -->
+                <div class="collapse navbar-collapse" id="linkbar">
+                    <!-- 列出內容 -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fa-solid fa-house-chimney"></i> 首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mego.html"><i class="fa-solid fa-face-grin-stars"></i></i> 關於我~</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="playgo.html"><i class="fa-solid fa-motorcycle"></i> 好好玩</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-utensils"></i> 好好吃</a>
+                        </li>
+                    </ul>
+                    <a href="https://www.instagram.com/zoe.owo.1017/"><button type="button" class="btn btn-primary btn-oblong"><i class="fa-brands fa-instagram px-1"></i>我的IG</button></a> 目前畫面寬度：
+                    <span id="res"></span>
+                    <script>
+                        document.getElementById('res').textContent = window.innerWidth;
+
+                        window.onresize = function() {
+                            document.getElementById('res').textContent = window.innerWidth;
+                        }
+                    </script>
+                </div>
+            </div>
+        </nav>
+        <!-- 投影片 -->
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img class="slide-pic" src="投影片/歡迎到我網頁照片.jpg" alt="slide1">
+                    <div class="carousel-caption">
+                        <h1><b>歡迎來到我的網站！</b></h1>
+                        <p>我是柔伊，跟著我去屏東玩吧</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="index.html">看影片去</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="slide-pic" src="投影片/關於我照片.jpg" alt="slide2">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-face-grin-stars"></i> 關於我~</b></h1>
+                        <p>桃園大溪人，因就讀屏科大，於是開始了屏東之旅...</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="mego.html">了解更多</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img class="slide-pic" src="投影片/好好玩照片.jpg" alt="slide3">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-motorcycle"></i> 好好玩</b></h1>
+                        <p>到過屏東那些地方呢?...</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="playgo.html">玩更多</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img class="slide-pic" src="投影片/好好吃照片.jpg" alt="slide4">
+                    <div class="carousel-caption">
+                        <h1><b><i class="fa-solid fa-utensils"></i> 好好吃</b></h1>
+                        <p>屏東有吃過什麼?...</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3" class="active"></button>
+            </div>
+        </div>
+
+        <!-- 跑馬燈 -->
+        <div class="marquee">
+            <marquee scrollamount="10">
+                <p>哈囉 Hello こんにちは 안녕~ヽ(✿ﾟ▽ﾟ)ノ</p>
+            </marquee>
+        </div>
+    </header>
+
+    <!-- 主要內容 -->
+    <article>
+        <div class="row">
+            <!-- 食物部分 -->
+            <div class="col-lg-10 col-md-9">
+                <div class="container">
+
+                    <!-- 屏東市 -->
+                    <div class="row">
+                        <h1 id="p1"><i class="fa-solid fa-map-pin"></i> 屏東市</h1>
+                        <hr>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard">
+                                <div class="text-center">
+                                    <h3 class="photohead">一草義廚</h3>
+                                    <p class="lead">義大利麵</p>
+                                    <img src="好好吃/一草義廚.jpg" class="img-thumbnail" alt="一草義廚" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food1" id="morebtn">  
+                                    更多資訊
+                                </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於一草義廚</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.5202956475355!2d120.49824793204394!3d22.671667385913207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e17a276df79b1%3A0xc65c9a68b8eed6ac!2z5LiA6I2J576p5bua77yI6JSh6JuL77yJ77yP576p5aSn5Yip6bq144CB54SX54Ok44CB54eJ6aOv77yP5bGP5p2x5b-F5ZCD77yP54m56Imy576O6aOf6aSQ5buz77yP5Y2I5pma6aSQ5o6o6Jam77yP5oiR5bGP5p2x5oiR6amV5YKy!5e0!3m2!1szh-TW!2stw!4v1655628255228!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">選醬</th>
+                                                            <th scope="col">選料</th>
+                                                            <th scope="col">價格範圍</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">紅醬茄汁</th>
+                                                            <td>肉醬、培根、海鮮</td>
+                                                            <td>$175-215</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">白醬奶香</th>
+                                                            <td>蔥蒜、培根、海鮮</td>
+                                                            <td>$175-215</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">墨魚汁</th>
+                                                            <td>海鮮、蛤蠣、明太子</td>
+                                                            <td>$240-265</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard2">
+                                <div class="text-center">
+                                    <h3 class="photohead">平丼郎</h3>
+                                    <p class="lead">丼飯</p>
+                                    <img src="好好吃/平丼郎.jpg" class="img-thumbnail" alt="平丼郎" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food2" id="morebtn">  
+                                    更多資訊
+                                </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於平丼郎</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=1m18!1m12!1m3!1d3681.530545756662!2d120.49797754343052!3d22.67128550000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e17306dc7fba7%3A0x4fbece97abfe402f!2z5bmz5Li86YOO!5e0!3m2!1szh-TW!2stw!4v1655638087855!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">口味</th>
+                                                            <th scope="col">加料</th>
+                                                            <th scope="col">價格範圍</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">五花牛</th>
+                                                            <td>泡菜、起司</td>
+                                                            <td>$95-175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">梅花豬</th>
+                                                            <td>泡菜、起司</td>
+                                                            <td>$90-170</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">雞腿肉</th>
+                                                            <td>泡菜、起司</td>
+                                                            <td>$95-175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">牛豬雙拼</th>
+                                                            <td>泡菜、起司</td>
+                                                            <td>$95-175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard">
+                                <div class="text-center">
+                                    <h3 class="photohead">御木軒</h3>
+                                    <p class="lead">冰品</p>
+                                    <img src="好好吃/御木軒.jpg" class="img-thumbnail" alt="御木軒" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food3" id="morebtn">  
+                                    更多資訊
+                                </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於御木軒</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.316475515453!2d120.48327811744387!3d22.679259800000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e172a39034cbb%3A0xcba8321fbb0e90f9!2z5bGP5p2x5Yaw5a6kIC0g5b6h5pyo6LuS!5e0!3m2!1szh-TW!2stw!4v1655642032641!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">品項</th>
+                                                            <th scope="col">口味</th>
+                                                            <th scope="col">價格範圍</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">刨冰</th>
+                                                            <td>芋頭、焦糖咖啡、抹茶</td>
+                                                            <td>$125</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">聖代</th>
+                                                            <td>宇治金時、季結果物、巧克力</td>
+                                                            <td>$120-140</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">冰淇淋</th>
+                                                            <td>養樂多、百香果、葡萄</td>
+                                                            <td>$50-120</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 內埔鄉 -->
+                    <div class="row">
+                        <h1 class="headtitle" id="p2"><i class="fa-solid fa-map-pin"></i> 內埔鄉</h1>
+                        <hr>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard2">
+                                <div class="text-center">
+                                    <h3 class="photohead">幸運草</h3>
+                                    <p class="lead">早餐</p>
+                                    <img src="好好吃/幸運草.jpg" class="img-thumbnail" alt="幸運草" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food4" id="morebtn">  
+                                            更多資訊
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於幸運草</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.40562484585!2d120.59339351461935!3d22.638660385148786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e23356caf450d%3A0x703194c2dce9cb78!2z5bGP5p2x5bm46YGL6I2J5pep6aSQ!5e0!3m2!1szh-TW!2stw!4v1655649238461!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">品項</th>
+                                                            <th scope="col">口味</th>
+                                                            <th scope="col">價格範圍</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">漢堡</th>
+                                                            <td>肌肉、起士、鮮蝦</td>
+                                                            <td>$30-40</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">吐司</th>
+                                                            <td>藍莓、肉鬆、燒肉</td>
+                                                            <td>$10-35</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">蛋餅</th>
+                                                            <td>九層塔、鮪魚、熱狗</td>
+                                                            <td>$25-30</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard">
+                                <div class="text-center">
+                                    <h3 class="photohead">又見晴天</h3>
+                                    <p class="lead">甜品</p>
+                                    <img src="好好吃/又見晴天.JPG" class="img-thumbnail" alt="又見晴天" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food5" id="morebtn">  
+                                    更多資訊
+                                </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於又見晴天</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.9539809231234!2d120.59531917807789!3d22.640674322826477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e3ccaca37520f%3A0x871af144e6b3bce0!2z5Y-I6KaL5pm05aSp55Sc5ZOB5bqXLeWxj-adsee2sue-juWGsOW6l3zlhafln5TlhrDlk4HmjqjolqZ85b-F5ZCD5Yaw5ZOBfOaJk-WNoeWGsOW6l3zmjqjolqblhrDlupd854m56Imy5Yaw5ZOB!5e0!3m2!1szh-TW!2stw!4v1655649769827!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">品項</th>
+                                                            <th scope="col">口味</th>
+                                                            <th scope="col">價格範圍</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">雪花冰</th>
+                                                            <td>珍珠奶茶、牛奶、哈密瓜</td>
+                                                            <td>$45-50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">氣泡調飲</th>
+                                                            <td>蜜柚、芒果、莓果</td>
+                                                            <td>$40</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">湯圓</th>
+                                                            <td>紅豆、花生</td>
+                                                            <td>$40</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">其他甜品</th>
+                                                            <td>嫩仙草、烤布蕾、杏仁豆腐</td>
+                                                            <td>$25-40</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard2">
+                                <div class="text-center">
+                                    <h3 class="photohead">永和四海</h3>
+                                    <p class="lead">中式餐點</p>
+                                    <img src="好好吃/永和四海豆漿大王.jpg" class="img-thumbnail" alt="永和四海豆漿大王" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food6" id="morebtn">  
+                                    更多資訊
+                                </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於永和四海豆漿大王</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.0262482210082!2d120.5653661146189!3d22.615494985160797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e22e49805effd%3A0x4736f7fe92f0816c!2z5rC45ZKM5Zub5rW36LGG5ry_5aSn546LIOWFp-WflOW6lw!5e0!3m2!1szh-TW!2stw!4v1655650651483!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">品項</th>
+                                                            <th scope="col">價格</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">水煎包</th>
+                                                            <td>$12</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">韭菜盒</th>
+                                                            <td>$25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">蔥抓餅</th>
+                                                            <td>$20</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">燒餅</th>
+                                                            <td>$12</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard">
+                                <div class="text-center">
+                                    <h3 class="photohead">SkyBlue Bar</h3>
+                                    <p class="lead">調酒</p>
+                                    <img src="好好吃/skyblue.jpg" class="img-thumbnail" alt="SkyBlue Bar" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food7" id="morebtn">  
+                                            更多資訊
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於SkyBlue Bar</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.344093408652!2d120.59239331461933!3d22.64095588514765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e2349f81a66f5%3A0x331d57d3dd9c781c!2sSkyBlue%20Bar!5e0!3m2!1szh-TW!2stw!4v1655652273118!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-martini-glass"></i> 品項：</h5>
+                                                <ul class="list-group list-group-horizontal">
+                                                    <li class="list-group-item">靜思湖</li>
+                                                    <li class="list-group-item">環遊世界</li>
+                                                    <li class="list-group-item">灑脫</li>
+                                                </ul>
+                                                <ul class="list-group list-group-horizontal-sm">
+                                                    <li class="list-group-item">柯夢波丹</li>
+                                                    <li class="list-group-item">瑪格麗特</li>
+                                                    <li class="list-group-item">情人坡</li>
+                                                </ul>
+                                                <ul class="list-group list-group-horizontal-md">
+                                                    <li class="list-group-item">貝禮詩甜蜜特調</li>
+                                                    <li class="list-group-item">蜜桃成熟時</li>
+                                                    <li class="list-group-item">魔鏡夢遊</li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 萬丹鄉 -->
+                    <div class="row">
+                        <h1 class="headtitle" id="p3"><i class="fa-solid fa-map-pin"></i> 萬丹鄉</h1>
+                        <hr>
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard">
+                                <div class="text-center">
+                                    <h3 class="photohead">萬丹紅豆餅</h3>
+                                    <p class="lead">紅豆餅</p>
+                                    <img src="好好吃/紅豆餅.jpg" class="img-thumbnail" alt="萬丹紅豆餅" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food8" id="morebtn">  
+                                            更多資訊
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於萬丹紅豆餅</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.8792233228023!2d120.48557381455508!3d22.58362008517712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e18d13ec8142b%3A0x32d40b3f1db461e7!2zKOm7gynokKzkuLnntIXosYbppIU!5e0!3m2!1szh-TW!2stw!4v1655653703636!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">口味</th>
+                                                            <th scope="col">價格</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>芋頭</th>
+                                                            <td>$15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>紅豆</th>
+                                                            <td>$15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>奶油</th>
+                                                            <td>$15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>芝麻</th>
+                                                            <td>$15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>花生</th>
+                                                            <td>$15</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 恆春鎮 -->
+                    <div class="row">
+                        <h1 class="headtitle" id="p4"><i class="fa-solid fa-map-pin"></i> 恆春鎮</h1>
+                        <hr>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard2">
+                                <div class="text-center">
+                                    <h3 class="photohead">等咧粉圓</h3>
+                                    <p class="lead">飲料</p>
+                                    <img src="好好吃/等咧粉圓.jpg" class="img-thumbnail" alt="等咧粉圓" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food9" id="morebtn">  
+                                            更多資訊
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於等咧粉圓</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.247450565433!2d120.74161891454314!3d22.001827685479387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3471b166c781a227%3A0x98ade98bd4319a21!2z562J5ZKn57KJ5ZyTLeaBhuaYpeW6lw!5e0!3m2!1szh-TW!2stw!4v1655654066090!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">種類</th>
+                                                            <th scope="col">品項</th>
+                                                            <th scope="col">價格範圍</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">鮮奶類</th>
+                                                            <td>鐵觀音、黑糖、台灣綠茶</td>
+                                                            <td>$55-80</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">單茶類</th>
+                                                            <td>紅茶、高山青、黑糖水</td>
+                                                            <td>$25-40</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">養生飲</th>
+                                                            <td>仙草干茶、薄荷綠茶、菊花茶</td>
+                                                            <td>$25-45</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片 -->
+                        <div class="col-lg-3 col-6">
+                            <div class="p-4" id="foodcard">
+                                <div class="text-center">
+                                    <h3 class="photohead">澤．甜品室</h3>
+                                    <p class="lead">甜品</p>
+                                    <img src="好好吃/澤．甜品室.jpg" class="img-thumbnail" alt="澤．甜品室" id="foodphoto">
+                                    <!-- 更多資訊按鈕 -->
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#food10" id="morebtn">  
+                                            更多資訊
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="food10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">關於澤．甜品室</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5><i class="fa-solid fa-location-dot"></i> 位置：</h5>
+                                                <div class="iframe-rwd">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.286268208839!2d120.74354151454297!3d22.000339685480178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3471b164621f0883%3A0xecb981a851c7b3db!2z44CQ6LaF6YGONuS9jeS4jeaUtuaKseatieOAke-9nOa-pO-8jueUnOa5r-WupO-9nOW3t-WFp-iri-WLv-WBnOaxvei7ig!5e0!3m2!1szh-TW!2stw!4v1655654680115!5m2!1szh-TW!2stw"
+                                                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                </div>
+                                                <hr>
+                                                <h5><i class="fa-solid fa-magnifying-glass-dollar"></i> 價目表：</h5>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">種類</th>
+                                                            <th scope="col">品項</th>
+                                                            <th scope="col">價格範圍</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">雪花冰</th>
+                                                            <td>花生、草莓、奶茶</td>
+                                                            <td>$65-100</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">配料</th>
+                                                            <td>奶蓋、奶凍、抹茶凍</td>
+                                                            <td>$25-40</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">薄餅</th>
+                                                            <td>起司</td>
+                                                            <td>$100</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 旁邊導覽 -->
+            <div class="col-lg-2 col-md-3 sidenav">
+                <div style="position: sticky;top: 100px;">
+                    <h2 class="text-center " id="foodhead "><b>想吃哪區</b></h2>
+                    <hr>
+                    <div class="food1">
+                        <a href="#p1">
+                            <h3><i class="fa-solid fa-map-pin"></i> <i><b>屏東市</b></i></h3>
+                        </a>
+                        <hr>
+                        <a href="#p2">
+                            <h3><i class="fa-solid fa-map-pin"></i> <i><b>內埔鄉</b></i></h3>
+                        </a>
+                        <hr>
+                        <a href="#p3">
+                            <h3><i class="fa-solid fa-map-pin"></i> <i><b>萬丹鄉</b></i></h3>
+                        </a>
+                        <hr>
+                        <a href="#p4">
+                            <h3><i class="fa-solid fa-map-pin"></i> <i><b>恆春鎮</b></i></h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </article>
+
+
+    <!-- 腳 -->
+    <footer class="py-3 " id="no ">
+        <div class="text-center ">
+            <h4><i class="fa-regular fa-face-laugh-wink px-1 "></i>柔伊的屏東旅遊網頁</h4>
+            <a href="# ">
+                <p>回到最上面</p>
+            </a>
+        </div>
+    </footer>

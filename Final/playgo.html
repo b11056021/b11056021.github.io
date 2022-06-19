@@ -10,14 +10,6 @@
     <!-- Boostrap 導入程式 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    目前畫面寬度：<span id="res"></span>
-    <script>
-        document.getElementById('res').textContent = window.innerWidth;
-
-        window.onresize = function() {
-            document.getElementById('res').textContent = window.innerWidth;
-        }
-    </script>
     <!-- 連結CSS -->
     <link rel="stylesheet" href="設計.css">
     <!-- 連結小圖標 -->
@@ -50,10 +42,18 @@
                             <a class="nav-link" href="#"><i class="fa-solid fa-motorcycle"></i> 好好玩</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-utensils"></i> 好好吃</a>
+                            <a class="nav-link" href="foodgo.html"><i class="fa-solid fa-utensils"></i> 好好吃</a>
                         </li>
                     </ul>
-                    <a href="https://www.instagram.com/zoe.owo.1017/"><button type="button" class="btn btn-primary btn-oblong"><i class="fa-brands fa-instagram px-1"></i>我的IG</button></a>
+                    <a href="https://www.instagram.com/zoe.owo.1017/"><button type="button" class="btn btn-primary btn-oblong"><i class="fa-brands fa-instagram px-1"></i>我的IG</button></a> 目前畫面寬度：
+                    <span id="res"></span>
+                    <script>
+                        document.getElementById('res').textContent = window.innerWidth;
+
+                        window.onresize = function() {
+                            document.getElementById('res').textContent = window.innerWidth;
+                        }
+                    </script>
                 </div>
             </div>
         </nav>
@@ -93,7 +93,7 @@
                         <h1><b><i class="fa-solid fa-utensils"></i> 好好吃</b></h1>
                         <p>屏東有吃過什麼?...</p>
                         <p>
-                            <a class="btn btn-lg btn-primary" href="#">吃更多</a>
+                            <a class="btn btn-lg btn-primary" href="foodgo.html">吃更多</a>
                         </p>
                     </div>
                 </div>
@@ -110,6 +110,13 @@
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" class="active"></button>
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
             </div>
+        </div>
+
+        <!-- 跑馬燈 -->
+        <div class="marquee">
+            <marquee scrollamount="10">
+                <p>哈囉 Hello こんにちは 안녕~ヽ(✿ﾟ▽ﾟ)ノ</p>
+            </marquee>
         </div>
     </header>
 
@@ -196,7 +203,7 @@
                             <h5 class="card-title"><b>關於影片...</b></h5>
                             <p>影片的拍攝地點竟然好吃又好玩？</p>
                             <p>還不快點到好好吃看看</p>
-                            <a href="#">
+                            <a href="foodgo.html">
                                 <p><small>點我到好好吃頁面 GOGO</small></p>
                             </a>
 
@@ -252,7 +259,7 @@
     <!-- 腳 -->
     <footer class="py-3">
         <div class="text-center">
-            <h4><i class="fa-regular fa-face-laugh-wink"></i>柔伊的屏東旅遊網頁</h4>
+            <h4><i class="fa-regular fa-face-laugh-wink  px-1"></i>柔伊的屏東旅遊網頁</h4>
             <a href="#">
                 <p>回到最上面</p>
             </a>

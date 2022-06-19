@@ -6,6 +6,9 @@ nav {
 
 .navbar {
     background-color: #CC9966;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 li a {
@@ -29,6 +32,7 @@ li a:hover {
     border-radius: 30px 30px 30px 30px;
     background-color: rgb(165, 117, 190);
     border-color: rgb(165, 117, 190);
+    margin-right: 20px;
 }
 
 @media (max-width:992px) {
@@ -60,11 +64,24 @@ li a:hover {
 }
 
 
+/*  跑馬燈*/
+
+marquee {
+    background-color: #e4bc94;
+    padding-top: 10px;
+}
+
+
 /*腳*/
 
 footer {
     background-image: linear-gradient(#CC9966, #c8a27c, white);
     margin-top: 40px;
+}
+
+#no {
+    background-image: linear-gradient(#CC9966, #c8a27c, white);
+    margin-top: -10px;
 }
 
 .figure {
@@ -104,4 +121,63 @@ small {
 
 .bg-Light {
     background-color: #CC9966;
+}
+
+
+/*好好吃*/
+
+.sidenav {
+    background-color: #ffdead;
+    margin-top: -16px;
+    margin-bottom: -50px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#foodhead {
+    color: #663300;
+    border: 1px solid #663300;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#foodphoto {
+    width: 200px;
+    height: 200px;
+    clip-path: circle(40%);
+    margin-bottom: 10px;
+}
+
+.photohead {
+    padding: 10px;
+}
+
+#morebtn {
+    float: right;
+    border-radius: 30px;
+}
+
+.bg-light,
+li.head {
+    background-color: #CC9966;
+}
+
+li.body {
+    background-color: lightgray;
+}
+
+#foodcard {
+    background-color: #F5DEB3;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#foodcard2 {
+    border: 1px solid #663300;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.headtitle {
+    margin-top: 50px;
 }

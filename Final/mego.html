@@ -10,14 +10,6 @@
     <!-- Boostrap 導入程式 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    目前畫面寬度：<span id="res"></span>
-    <script>
-        document.getElementById('res').textContent = window.innerWidth;
-
-        window.onresize = function() {
-            document.getElementById('res').textContent = window.innerWidth;
-        }
-    </script>
     <!-- 連結CSS -->
     <link rel="stylesheet" href="設計.css">
     <!-- 連結小圖標 -->
@@ -49,10 +41,18 @@
                             <a class="nav-link" href="playgo.html"><i class="fa-solid fa-motorcycle"></i> 好好玩</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-utensils"></i> 好好吃</a>
+                            <a class="nav-link" href="foodgo.html"><i class="fa-solid fa-utensils"></i> 好好吃</a>
                         </li>
                     </ul>
-                    <a href="https://www.instagram.com/zoe.owo.1017/"><button type="button" class="btn btn-primary btn-oblong"><i class="fa-brands fa-instagram px-1"></i>我的IG</button></a>
+                    <a href="https://www.instagram.com/zoe.owo.1017/"><button type="button" class="btn btn-primary btn-oblong"><i class="fa-brands fa-instagram px-1"></i>我的IG</button></a> 目前畫面寬度：
+                    <span id="res"></span>
+                    <script>
+                        document.getElementById('res').textContent = window.innerWidth;
+
+                        window.onresize = function() {
+                            document.getElementById('res').textContent = window.innerWidth;
+                        }
+                    </script>
                 </div>
             </div>
         </nav>
@@ -92,7 +92,7 @@
                         <h1><b><i class="fa-solid fa-utensils"></i> 好好吃</b></h1>
                         <p>屏東有吃過什麼?...</p>
                         <p>
-                            <a class="btn btn-lg btn-primary" href="#">吃更多</a>
+                            <a class="btn btn-lg btn-primary" href="foodgo.html">吃更多</a>
                         </p>
                     </div>
                 </div>
@@ -110,6 +110,13 @@
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
             </div>
         </div>
+
+        <!-- 跑馬燈 -->
+        <div class="marquee">
+            <marquee scrollamount="10">
+                <p>哈囉 Hello こんにちは 안녕~ヽ(✿ﾟ▽ﾟ)ノ</p>
+            </marquee>
+        </div>
     </header>
 
     <!-- 主要內容 -->
@@ -118,7 +125,7 @@
             <div class="row">
                 <!-- 自我介紹 -->
                 <div class="col-lg-4 col-md-4">
-                    <img src="自我介紹照片.jpg" class="img-thumbnail" alt="自我介紹照片">
+                    <img src="關於我/自我介紹照片.jpg" class="img-thumbnail" alt="自我介紹照片">
                 </div>
                 <div class="col-lg-8 col-md-8">
                     <h1 style="color: gray;"><b>自我介紹開始嘍</b></h1>
@@ -194,7 +201,77 @@
                                 </li>
                                 <li class="list-inline-item">拼拼豆、織幸運繩</li>
                             </ul>
-
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h3>其他</h3>
+                                </li>
+                                <li class="list-inline-item">到處拍拍照 <small style="color: gray;">（下面有一些拍的照片）</small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <h2 class="mt-3"><b><i class="fa-solid fa-camera"></i> 景點照</b></h2>
+                </li>
+                <li class="list-inline-item"><a href="playgo.html">看更多景點照<i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+            <div class="row row-cols-1">
+                <div class="col-lg-4 col-md-6">
+                    <div style="margin-bottom: 10px;">
+                        <div class="card card-cover h-100 text-white" style="background-image: url('關於我/菸廠.jpg');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white ">
+                                <h2 class="pt-5 mt-5 display-6 fw-bold">菸廠</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                    </li>
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>#文化基地</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <small>#製造菸草</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div style="margin-bottom: 10px;">
+                        <div class="card card-cover h-100 text-white" style="background-image: url('關於我/職人町.jpg');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white ">
+                                <h2 class="pt-5 mt-5 display-6 fw-bold">職人町</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                    </li>
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>#彩繪外牆</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <small>#歐式小鎮</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div style="margin-bottom: 10px;">
+                        <div class="card card-cover h-100 text-white" style="background-image: url('關於我/四林平地.jpg');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white ">
+                                <h2 class="pt-5 mt-5 display-6 fw-bold">四林平地</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                    </li>
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>#大草地</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <small>#放鬆</small>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -206,7 +283,7 @@
     <!-- 腳 -->
     <footer class="py-3">
         <div class="text-center">
-            <h4><i class="fa-regular fa-face-laugh-wink"></i>柔伊的屏東旅遊網頁</h4>
+            <h4><i class="fa-regular fa-face-laugh-wink  px-1"></i>柔伊的屏東旅遊網頁</h4>
             <a href="#">
                 <p>回到最上面</p>
             </a>
