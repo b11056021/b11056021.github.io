@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="設計.css">
     <!-- 連結小圖標 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
 </head>
 
 <body>
@@ -30,6 +29,9 @@
                 <div class="collapse navbar-collapse" id="linkbar">
                     <!-- 列出內容 -->
                     <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#warning"><i class="fa-solid fa-book"></i> 網頁說明</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-house-chimney"></i> 首頁</a>
                         </li>
@@ -55,6 +57,34 @@
                 </div>
             </div>
         </nav>
+        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert" style=" z-index: 100;">
+            <h2><strong>可以先看看網頁說明窩</strong></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <!-- 網頁說明 -->
+        <div class="modal fade" id="warning" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">網頁說明</h5>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-person-chalkboard"></i> 介紹網頁</h5>
+                        此網頁為<a href="https://awoo.ai/zh-hant/blog/rwd-website-seo/" title="更了解RWD"><b>RWD響應式網頁</b></a>，所以可以用電腦觀看並把視窗放大縮小看看網頁的排版窩！
+                        <hr>
+                        <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-triangle-exclamation"></i> 注意事項</h5>
+                        <ul>
+                            <li><i class="fa-solid fa-house-chimney"></i> 首頁的影片可能會自動撥放，注意音量</li>
+                            <li><i class="fa-solid fa-motorcycle"></i> 好好玩的版面有時會亂掉或文字重疊，重新整理或跳到別頁再跳回去即可</li>
+                            <li>有其他問題可以再跟我說窩!</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- 投影片 -->
         <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
